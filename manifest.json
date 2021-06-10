@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "YouTube Progress Bar",
+    "version": "1.0",
+    "description": "Adds a progress bar below YouTube videos",
+    "icons": {
+        "128": "128.png"
+    },
+    "browser_action": {
+        "default_icon": "128.png"
+    },
+    "permissions": [
+        "*://*.youtube.com/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [ "*://*.youtube.com/*" ],
+            "js": [ "time.js"],
+            "css": [ "time.css"],
+            "run_at": "document_idle"
+        }
+    ]
+}
